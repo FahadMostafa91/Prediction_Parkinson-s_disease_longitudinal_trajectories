@@ -1,0 +1,53 @@
+\begingroup
+\color{revisionblue}\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\setlength{\LTcapwidth}{\textwidth}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.165\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.105\textwidth}>{\raggedright\arraybackslash}p{0.335\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}@{}}
+\caption{\rev{Variables in the Oxford Parkinson's disease telemonitoring data set (42 subjects, 5{,}875 voice recordings).}}\label{tab:variables}\label{tab:variables_pd}\\
+\toprule
+\textbf{Variable} & \textbf{Name} & \textbf{Type} & \textbf{Description} & \textbf{Range} \\
+\midrule
+\endfirsthead
+\multicolumn{5}{c}{\textbf{Table \thetable\ continued}}\\
+\toprule
+\textbf{Variable} & \textbf{Name} & \textbf{Type} & \textbf{Description} & \textbf{Range} \\
+\midrule
+\endhead
+\midrule\multicolumn{5}{r}{Continued on next page}\\
+\endfoot
+\endlastfoot
+
+\textit{subject\#}$^{\dagger}$ & Subject ID        & Identifier & Unique patient identifier; groups repeated recordings by subject & 1--42 \\
+\textit{age}$^{\dagger}$       & Age               & Continuous & Age of the patient (years) & 36--85 \\
+\textit{sex}$^{\dagger}$       & Sex               & Binary     & Sex of the patient (0 = male, 1 = female) & 0, 1 \\
+\textit{test\_time}            & Test Time         & Continuous & Time since recruitment into the trial (days) & $-4.26$--215.49 \\
+\textit{motor\_UPDRS}          & Motor UPDRS       & Continuous & Clinician-rated motor UPDRS score (scale 0--108), linearly interpolated between clinical assessments & 5.04--39.51 \\
+\textit{total\_UPDRS}          & Total UPDRS       & Continuous & Clinician-rated total UPDRS score (scale 0--176), linearly interpolated between clinical assessments & 7.00--54.99 \\
+\addlinespace
+\textit{Jitter(\%)}            & Local Jitter      & Continuous & Relative cycle-to-cycle variation in fundamental frequency & 0.0008--0.1000 \\
+\textit{Jitter(Abs)}           & Absolute Jitter   & Continuous & Mean absolute difference between consecutive pitch periods (seconds) & $2.2\times10^{-6}$--$4.5\times10^{-4}$ \\
+\textit{Jitter:RAP}            & Jitter RAP        & Continuous & Relative average perturbation of pitch period over 3 cycles & 0.0003--0.0575 \\
+\textit{Jitter:PPQ5}           & Jitter PPQ5       & Continuous & Five-point pitch period perturbation quotient & 0.0004--0.0696 \\
+\textit{Jitter:DDP}            & Jitter DDP        & Continuous & Mean absolute difference of consecutive period differences ($= 3 \times$ RAP) & 0.0010--0.1726 \\
+\addlinespace
+\textit{Shimmer}               & Local Shimmer     & Continuous & Relative cycle-to-cycle variation in amplitude & 0.0031--0.2686 \\
+\textit{Shimmer(dB)}           & Shimmer (dB)      & Continuous & Local shimmer expressed in decibels & 0.026--2.107 \\
+\textit{Shimmer:APQ3}          & Shimmer APQ3      & Continuous & Three-point amplitude perturbation quotient & 0.0016--0.1627 \\
+\textit{Shimmer:APQ5}          & Shimmer APQ5      & Continuous & Five-point amplitude perturbation quotient & 0.0019--0.1670 \\
+\textit{Shimmer:APQ11}         & Shimmer APQ11     & Continuous & Eleven-point amplitude perturbation quotient & 0.0025--0.2755 \\
+\textit{Shimmer:DDA}           & Shimmer DDA       & Continuous & Mean absolute difference of consecutive amplitude differences ($= 3 \times$ APQ3) & 0.0048--0.4880 \\
+\addlinespace
+\textit{NHR}                   & Noise-to-Harmonics Ratio & Continuous & Ratio of noise to tonal components in the voice & 0.0003--0.7483 \\
+\textit{HNR}                   & Harmonics-to-Noise Ratio & Continuous & Ratio of tonal to noise components in the voice (dB) & 1.66--37.88 \\
+\textit{RPDE}                  & Recurrence Period Density Entropy & Continuous & Nonlinear dynamical complexity measure of the voice signal & 0.151--0.966 \\
+\textit{DFA}                   & Detrended Fluctuation Analysis & Continuous & Signal fractal scaling exponent & 0.514--0.866 \\
+\textit{PPE}                   & Pitch Period Entropy & Continuous & Nonlinear measure of fundamental frequency variation & 0.022--0.732 \\
+\bottomrule
+\multicolumn{5}{@{}p{\textwidth}@{}}{\footnotesize $^{\dagger}$Baseline (subject-level) variable, constant across a subject's recordings. The remaining columns give recording-level values; UPDRS scores are interpolated between clinical assessments. Ranges are rounded observed minimum--maximum values.
+Subjects contribute 101--168 recordings (mean 140) over 17--28 recording days (using the integer part rounded down from \textit{test\_time}), with about six recordings per day; the 5{,}875 recordings fall at 2{,}501 distinct subject--time points, and recordings sharing a time point have identical UPDRS values.
+There are no missing values. Twelve recordings from two subjects have negative \textit{test\_time} (recorded before the recruitment date).
+UPDRS = Unified Parkinson's Disease Rating Scale; RAP = relative average perturbation; PPQ = period perturbation quotient;
+DDP = difference of differences of periods; APQ = amplitude perturbation quotient; DDA = difference of differences of amplitudes.}\\
+\end{longtable}
+\endgroup
