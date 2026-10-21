@@ -1,0 +1,2 @@
+# Prediction_Parkinson-s_disease_longitudinal_trajectories
+Prediction of Parkinson’s disease progression from sparse longitudinal trajectories using multiclass likelihood contrast learning
